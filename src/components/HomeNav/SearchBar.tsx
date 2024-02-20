@@ -14,7 +14,7 @@ const SearchBar = () => {
                 <div className="pl-3 flex items-center">
                     {icon}
                 </div>
-                <input ref={searchBar} className="pl-3 w-full rounded-md bg-teal-800" onFocus={() => { setIcon(<X className="cursor-pointer"></X>) }} onBlur={() => setIcon(<Search onClick={() => searchBar?.current?.focus()} className="cursor-pointer"></Search>)} placeholder="Search..." type="search"></input>
+                <input ref={searchBar} className="pl-3 w-full rounded-md bg-teal-800" onFocus={() => { setIcon(<X className="cursor-pointer" size={20}></X>) }} onBlur={() => setIcon(<Search onClick={() => searchBar?.current?.focus()} className="cursor-pointer"></Search>)} placeholder="Search..." type="search"></input>
             </div>
         </>
     )
