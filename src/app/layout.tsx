@@ -2,6 +2,7 @@ import "~/styles/globals.css";
 
 import { Inter } from "next/font/google";
 import { SessionProvider } from "next-auth/react";
+import HomeNav from "~/components/HomeNav/HomeNav";
 
 
 const inter = Inter({
@@ -22,7 +23,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`font-sans ${inter.variable} bg-black text-white`}>{children}</body>
+      <body className={`font-sans ${inter.variable} bg-black text-white`}>
+        <nav><HomeNav username="Gabri3445"></HomeNav></nav>
+        <main>{children}</main>
+        </body>
     </html>
   );
 }
