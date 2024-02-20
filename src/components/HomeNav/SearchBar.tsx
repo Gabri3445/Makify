@@ -2,6 +2,8 @@
 import { useRef, useState } from "react";
 import { Search, X } from "react-bootstrap-icons";
 
+//TODO refactor this
+
 const SearchBar = () => {
     const searchBar: React.RefObject<HTMLInputElement> = useRef(null)
 
