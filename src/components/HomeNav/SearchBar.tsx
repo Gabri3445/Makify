@@ -10,7 +10,7 @@ const SearchBar = () => {
     const [icon, setIcon] = useState(<Search className="cursor-pointer" onClick={() => searchBar?.current?.focus()}></Search>)
     return (
         <>
-            <div className="w-96 bg-teal-800 h-8 rounded-md flex">
+            <div className="md:w-96 w-40 bg-teal-800 h-8 rounded-md flex">
                 <div className="pl-3 flex items-center">
                     {icon}
                 </div>
