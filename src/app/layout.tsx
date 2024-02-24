@@ -24,7 +24,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`font-sans ${inter.variable} bg-black text-white`}>
-        <nav className="sticky top-0 z-20"><HomeNav username="Gabri3445"></HomeNav></nav>
+        <nav className="sticky top-0 z-20"><HomeNav></HomeNav></nav>
         <main>{children}</main>
         </body>
     </html>
