@@ -1,7 +1,6 @@
 import "~/styles/globals.css";
 
 import { Inter } from "next/font/google";
-import { SessionProvider } from "next-auth/react";
 import HomeNav from "~/components/HomeNav/HomeNav";
 
 
@@ -23,7 +22,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`font-sans ${inter.variable} bg-black text-white`}>
+      <body className={`font-sans ${inter.variable} bg-gray-950 text-white`}>
         <nav className="sticky top-0 z-20"><HomeNav></HomeNav></nav>
         <main>{children}</main>
         </body>
