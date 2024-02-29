@@ -31,7 +31,7 @@ const ItemCard = ({ name, username, image, userImage, likes, itemLink, userLink 
                 </div>
                 <Link href={itemLink} className="w-full h-full absolute z-0"></Link>
             </div>
-            <Link href={itemLink}><div className="w-full text-center rounded-lg bg-teal-500 text-lg py-3 overflow-hidden whitespace-nowrap text-ellipsis px-5">{name}</div></Link>
+            <Link href={itemLink}><div className="w-full text-center rounded-lg bg-teal-500 text-base py-3 overflow-hidden whitespace-nowrap text-ellipsis px-5">{name}</div></Link>
         </div>
     )
 }
