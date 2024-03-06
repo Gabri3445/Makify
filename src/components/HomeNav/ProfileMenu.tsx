@@ -17,6 +17,9 @@ const ProfileMenu = (props : {username: string}) => {
     const handleProfile = () => {
         router.push(`/profile/${props.username}`)
     };
+    const handleEditProfile = () => {
+        router.push(`/profile`)
+    }
     const handleLogOut = async () => {
         await signOut();
     }
@@ -36,6 +39,7 @@ const ProfileMenu = (props : {username: string}) => {
                     'aria-labelledby': 'basic-button',
                 }}
             >
+                <MenuItem onClick={handleEditProfile}>Edit Profile</MenuItem>
                 <MenuItem onClick={handleProfile}>Profile</MenuItem>
                 <MenuItem onClick={handleLogOut}>Log out</MenuItem>
             </Menu>
