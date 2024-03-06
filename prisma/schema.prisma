@@ -29,6 +29,13 @@ model Item {
   @@index([name])
 }
 
+model ProfileInfo {
+  id       String @id @default(cuid())
+  bio      String
+  printers String
+  User     User?
+}
+
 // Necessary for Next auth
 model Account {
   id                String  @id @default(cuid())
@@ -57,14 +64,16 @@ model Session {
 }
 
 model User {
-  id            String    @id @default(cuid())
-  name          String?   @unique
-  email         String?   @unique
+  id            String       @id @default(cuid())
+  name          String?      @unique
+  email         String?      @unique
   emailVerified DateTime?
   image         String?
   accounts      Account[]
   sessions      Session[]
   items         Item[]
+  profileInfo   ProfileInfo? @relation(fields: [profileInfoId], references: [id])
+  profileInfoId String?      @unique
 }
 
 model VerificationToken {
