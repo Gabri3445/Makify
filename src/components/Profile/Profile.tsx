@@ -1,6 +1,4 @@
 import Image from "next/image"
-import { getServerAuthSession } from "~/server/auth"
-import { db } from "~/server/db"
 
 interface ProfileProps {
     userImage: string

@@ -1,10 +1,39 @@
 import Profile from "~/components/Profile/Profile";
+import { db } from "~/server/db";
 
-export default function ProfilePage({ params }: { params: { username: string } }) {
+export default async function ProfilePage({ params }: { params: { username: string } }) {
     
-    return (
-        <div>
-            <Profile></Profile>
-        </div>
-    )
+    const user = await db.user.findUnique({
+        where: {
+            name: params.username
+        },
+        select: {
+            name: true,
+            image: true,
+            items: {
+                select: {
+                    id: true,
+                    image: true,
+                    likes: true,
+                    name: true
+                }
+            }
+        },
+    })
+
+    console.log(user)
+
+    if(user) {
+        return (
+            <div>
+                <Profile userImage={user.image ?? ""}></Profile>
+            </div>
+        )
+    } else {
+        return (
+            <div>
+                User not found
+            </div>
+        )
+    }
 }
