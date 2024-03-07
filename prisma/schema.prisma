@@ -30,9 +30,9 @@ model Item {
 }
 
 model ProfileInfo {
-  id       String @id @default(cuid())
-  bio      String
-  printers String
+  id       String  @id @default(cuid())
+  bio      String @default("")
+  printers String @default("")
   User     User?
 }
 
