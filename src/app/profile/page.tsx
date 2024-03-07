@@ -1,10 +1,10 @@
-import EditBio from "~/components/Profile/EditBio";
-import EditPrinters from "~/components/Profile/EditPrinters";
-import EditUsername from "~/components/Profile/EditUsername";
-import GoToSignIn from "~/components/Profile/GoToSignIn";
+import EditBio from "~/components/EditProfile/EditBio";
+import EditPrinters from "~/components/EditProfile/EditPrinters";
+import EditUsername from "~/components/EditProfile/EditUsername";
+import GoToSignIn from "~/components/EditProfile/GoToSignIn";
 import { getServerAuthSession } from "~/server/auth"
 
-export default async function ProfilePage() {
+export default async function EditProfilePage() {
 
     const session = await getServerAuthSession();
 

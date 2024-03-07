@@ -1,5 +1,4 @@
 import ItemCard from "~/components/ItemCard/ItemCard";
-import { getServerAuthSession } from "~/server/auth";
 
 export default async function HomePage() {
 
