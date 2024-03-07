@@ -60,8 +60,8 @@ export default async function EditBio(props: EditBioProps) {
     return (
         <div className="mt-5">
             <span className="text-4xl">Bio: </span>
-            <form id="form" className="w-full mt-1" action={changeBio}>
-                <textarea form="form" name="bio" defaultValue={data?.profileInfo?.bio} className="resize-none w-full h-60 bg-gray-500 border border-gray-300 rounded-md"></textarea>
+            <form id="bioForm" className="w-full mt-1" action={changeBio}>
+                <textarea form="bioForm" name="bio" defaultValue={data?.profileInfo?.bio} className="resize-none w-full h-60 bg-gray-500 border border-gray-300 rounded-md"></textarea>
                 <div className="flex flex-row-reverse mt-2"><input className="bg-blue-500 p-3 rounded-md cursor-pointer" type="submit"></input></div>
             </form>
         </div>
