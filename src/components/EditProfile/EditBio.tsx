@@ -36,6 +36,7 @@ export default async function EditBio(props: EditBioProps) {
                     }
                 }
             })
+            return;
         }
         await db.user.update({
             where: {
