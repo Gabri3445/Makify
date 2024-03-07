@@ -21,8 +21,6 @@ export default async function ProfilePage({ params }: { params: { username: stri
         },
     })
 
-    console.log(user)
-
     if(user) {
         return (
             <div>
