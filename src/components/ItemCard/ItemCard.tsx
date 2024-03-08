@@ -14,7 +14,7 @@ interface ItemCardProps {
 
 const ItemCard = ({ name, username, image, userImage, likes, itemLink, userLink }: ItemCardProps) => {
     return (
-        <div className="border w-80 h-80 rounded-lg flex flex-col justify-between bg-gray-900 group mx-3 my-3">
+        <div className="border w-80 h-80 rounded-b-lg rounded-t-sm flex flex-col justify-between bg-gray-900 group mx-3 my-3">
             <div className="w-full h-full bg-center bg-no-repeat bg-contain flex relative" style={{ backgroundImage: `url(${image})` }}>
                 <div className="pt-4 px-4 h-fit w-full flex justify-between">
                     <div className="flex">
@@ -31,7 +31,7 @@ const ItemCard = ({ name, username, image, userImage, likes, itemLink, userLink 
                 </div>
                 <Link href={itemLink} className="w-full h-full absolute z-0"></Link>
             </div>
-            <Link href={itemLink}><div className="w-full text-center rounded-lg bg-teal-500 text-base py-3 overflow-hidden whitespace-nowrap text-ellipsis px-5">{name}</div></Link>
+            <Link href={itemLink}><div className="w-full text-center rounded-b-lg bg-teal-500 text-base py-3 overflow-hidden whitespace-nowrap text-ellipsis px-5">{name}</div></Link>
         </div>
     )
 }
