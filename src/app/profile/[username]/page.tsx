@@ -23,8 +23,8 @@ export default async function ProfilePage({ params }: { params: { username: stri
 
     if(user) {
         return (
-            <div>
-                <Profile userImage={user.image ?? ""}></Profile>
+            <div className="mx-auto w-11/12 mt-5">
+                <Profile userImage={user.image ?? ""} bio="bio" printers={["printer"]} username="username"></Profile>
             </div>
         )
     } else {
