@@ -10,7 +10,7 @@ interface ProfileProps {
 export default async function Profile(props: ProfileProps) {
 
     return (
-        <div className="border border-gray-900 bg-gray-700 w-96 flex flex-col items-center justify-center py-5">
+        <div className="border border-gray-900 bg-gray-700 w-96 flex mt-3 h-fit flex-col items-center justify-center py-5">
             <div className="rounded-full border-4 z-10 w-fit bg-white overflow-hidden">
                 <Image src={props.userImage} width={72} height={72} alt="User icon"></Image>
             </div>
